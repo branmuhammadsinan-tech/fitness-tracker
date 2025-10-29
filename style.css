@@ -1,0 +1,205 @@
+/* === Base Styling === */
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* === Navigation Bar === */
+nav {
+    background-color: #111;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 10px 0 0 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav a:hover {
+    color: #0ff;
+}
+
+nav a.active {
+    text-decoration: underline;
+    color: #0ff;
+}
+
+/* === Page Content === */
+.content {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.content p {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* === Tables === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #111;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #222;
+}
+
+/* === Forms === */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+input {
+    background-color: #222;
+    color: white;
+}
+
+button {
+    background-color: #0ff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #09a;
+}
+
+/* === List + Summary === */
+ul#workout-list {
+    list-style: none;
+    padding: 0;
+}
+
+ul#workout-list li {
+    background-color: #111;
+    margin: 8px 0;
+    padding: 10px;
+    border-left: 4px solid #0ff;
+    border-radius: 4px;
+}
+
+.summary {
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+/* === Footer (optional) === */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    border-top: 1px solid #222;
+    margin-top: 40px;
+}
+
+/* === Responsive Design === */
+
+/* Tablets */
+@media (max-width: 900px) {
+    nav h1 {
+        font-size: 1.5em;
+    }
+    nav ul {
+        justify-content: center;
+        gap: 15px;
+    }
+    .content {
+        padding: 30px 15px;
+    }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+    nav ul li {
+        width: 100%;
+    }
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+    table, th, td {
+        font-size: 0.9em;
+    }
+    .content h2 {
+        font-size: 1.5em;
+    }
+    button {
+        font-size: 0.95em;
+    }
+}

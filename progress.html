@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker | Daily Progress</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h1>Fitness Tracker</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="workouts.html">Workouts</a></li>
+            <li><a href="progress.html" class="active">Daily Progress</a></li>
+        </ul>
+    </nav>
+
+    <section class="content">
+        <h2>Track Your Daily Progress</h2>
+        <form id="progress-form">
+            <label for="workout">Workout Type:</label>
+            <input type="text" id="workout" placeholder="e.g., Running" required>
+
+            <label for="duration">Duration (minutes):</label>
+            <input type="number" id="duration" placeholder="30" required>
+
+            <label for="calories">Calories Burned:</label>
+            <input type="number" id="calories" placeholder="300" required>
+
+            <button type="submit">Add Workout</button>
+        </form>
+
+        <h3>Today's Workouts</h3>
+        <ul id="workout-list"></ul>
+
+        <div class="summary">
+            <p><strong>Total Workouts:</strong> <span id="total-workouts">0</span></p>
+            <p><strong>Total Calories Burned:</strong> <span id="total-calories">0</span> kcal</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
